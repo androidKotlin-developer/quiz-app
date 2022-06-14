@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_view"
+    android:id="@+id/cl_profile"
+    tools:context=".activity.MainActivity">
+
+    <ProgressBar
+        android:padding="3dp"
+        android:layout_marginTop="16dp"
+        android:max="10"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_quiz_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_progress"
+        android:progress="0"
+        android:indeterminate="false"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/_0_10"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pb_quiz_progress"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_quiz_progress"
+        android:text="@string/what_is_this_is_movie"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:src="@android:drawable/arrow_down_float"
+        android:contentDescription="@string/hint"
+        android:layout_marginTop="16dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/iv_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+    <TextView
+        android:background="@drawable/bg_option"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/option_one"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_option_two"
+        android:textSize="18sp"
+        android:id="@+id/tv_option_one"/>
+
+    <TextView
+        android:background="@drawable/bg_option"
+        android:textColor="@color/black"
+        android:text="@string/option_one"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_option_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/tv_option_two"/>
+
+    <TextView
+        android:background="@drawable/bg_option"
+        android:textColor="@color/black"
+        android:text="@string/option_one"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_option_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/tv_option_three"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:text="@string/option_one"
+        android:background="@drawable/bg_option"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/tv_option_four"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
